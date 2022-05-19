@@ -89,7 +89,7 @@ namespace Главный
             }
             connection.Close();
         }
-
+        //чик чирик
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             KlientID = Int32.Parse(comboBox1.Text.Substring(0, comboBox1.Text.IndexOf('.')));
