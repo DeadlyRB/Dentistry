@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2372D8B9-3C68-4037-80AF-C22003571D04}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Главный</RootNamespace>
+    <AssemblyName>Главный</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Glav.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Glav.Designer.cs">
+      <DependentUpon>Glav.cs</DependentUpon>
+    </Compile>
+    <Compile Include="material.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="material.Designer.cs">
+      <DependentUpon>material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpKlient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpKlient.Designer.cs">
+      <DependentUpon>UpKlient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Klient.Designer.cs">
+      <DependentUpon>Klient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewKlient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewKlient.Designer.cs">
+      <DependentUpon>NewKlient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewSotrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewSotrud.Designer.cs">
+      <DependentUpon>NewSotrud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewUslugi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUslugi.Designer.cs">
+      <DependentUpon>NewUslugi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recepetion\Priem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recepetion\Priem.Designer.cs">
+      <DependentUpon>Priem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sotrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sotrud.Designer.cs">
+      <DependentUpon>Sotrud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recepetion\UpPriem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recepetion\UpPriem.Designer.cs">
+      <DependentUpon>UpPriem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpSotr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpSotr.Designer.cs">
+      <DependentUpon>UpSotr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpUslugi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpUslugi.Designer.cs">
+      <DependentUpon>UpUslugi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uslugi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uslugi.Designer.cs">
+      <DependentUpon>Uslugi.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Glav.resx">
+      <DependentUpon>Glav.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klient.resx">
+      <DependentUpon>Klient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="material.resx">
+      <DependentUpon>material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewKlient.resx">
+      <DependentUpon>NewKlient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewSotrud.resx">
+      <DependentUpon>NewSotrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewUslugi.resx">
+      <DependentUpon>NewUslugi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recepetion\Priem.resx">
+      <DependentUpon>Priem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Sotrud.resx">
+      <DependentUpon>Sotrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpKlient.resx">
+      <DependentUpon>UpKlient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recepetion\UpPriem.resx">
+      <DependentUpon>UpPriem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpSotr.resx">
+      <DependentUpon>UpSotr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpUslugi.resx">
+      <DependentUpon>UpUslugi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uslugi.resx">
+      <DependentUpon>Uslugi.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6df05b03-4e59-45c3-8391-04dd1a5d72ba.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Илья.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Clients\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
