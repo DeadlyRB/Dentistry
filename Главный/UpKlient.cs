@@ -24,20 +24,22 @@ namespace Главный
             connection.Open();
             try
             {
-                MySqlCommand command = new MySqlCommand("UPDATE klient set idKlient ='" + textBox2.Text + "',FIO ='" + textBox1.Text + "',DataYear ='" + maskedTextBox2.Text + "',Adress ='" + textBox3.Text + "',Telephone ='" + maskedTextBox1.Text + "',Snils ='" + maskedTextBox3.Text + "',INN ='" + maskedTextBox4.Text + "',MedPolis ='" + maskedTextBox5.Text + "',VidDocum ='" + comboBox1.Text + "',Pasport ='" + maskedTextBox7.Text + "',SeriesPas ='" + maskedTextBox8.Text + "' WHERE idKlient='" + textBox2.Text + "'", connection);
-            if (command.ExecuteNonQuery() == 1) 
-            {
-                MessageBox.Show("Данные изменены");
+                MySqlCommand command = new MySqlCommand("UPDATE klient set idKlient ='@idKlient',FIO ='" + textBox1.Text + "',DataYear ='" + maskedTextBox2.Text + "',Adress ='" + textBox3.Text + "',Telephone ='" + maskedTextBox1.Text + "',Snils ='" + maskedTextBox3.Text + "',INN ='" + maskedTextBox4.Text + "',MedPolis ='" + maskedTextBox5.Text + "',VidDocum ='" + comboBox1.Text + "',Pasport ='" + maskedTextBox7.Text + "',SeriesPas ='" + maskedTextBox8.Text + "' WHERE idKlient='" + textBox2.Text + "'", connection);
+                command.Parameters.AddWithValue("@idKlient",textBox2.Tex);
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Данные изменены");
+                }
+                else
+                {
+                    MessageBox.Show("Данные не изменены");
+                }
             }
-            else
-            {
-                MessageBox.Show("Данные не изменены");
-            } 
-            }catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-           
+
             connection.Close();
         }
         private void UpKlient_Load(object sender, EventArgs e)
@@ -53,7 +55,7 @@ namespace Главный
 
         private void comboBox1_Enter(object sender, EventArgs e)
         {
-          
+
             try
             {
                 string selectQuery = "SELECT * from viddoc";
@@ -84,7 +86,6 @@ namespace Главный
                     MySqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
                     {
-
                         textBox1.Text = reader["FIO"].ToString();
                         maskedTextBox2.Text = reader["DataYear"].ToString();
                         textBox3.Text = reader["Adress"].ToString();
@@ -95,9 +96,6 @@ namespace Главный
                         comboBox1.Text = reader["VidDocum"].ToString();
                         maskedTextBox8.Text = reader["SeriesPas"].ToString();
                         maskedTextBox7.Text = reader["Pasport"].ToString();
-                            
-
-
                     }
                     connection.Close();
                 }
