@@ -24,8 +24,10 @@ namespace Главный
             connection.Open();
             try
             {
-                MySqlCommand command = new MySqlCommand("UPDATE klient set idKlient ='@idKlient',FIO ='" + textBox1.Text + "',DataYear ='" + maskedTextBox2.Text + "',Adress ='" + textBox3.Text + "',Telephone ='" + maskedTextBox1.Text + "',Snils ='" + maskedTextBox3.Text + "',INN ='" + maskedTextBox4.Text + "',MedPolis ='" + maskedTextBox5.Text + "',VidDocum ='" + comboBox1.Text + "',Pasport ='" + maskedTextBox7.Text + "',SeriesPas ='" + maskedTextBox8.Text + "' WHERE idKlient='" + textBox2.Text + "'", connection);
-                command.Parameters.AddWithValue("@idKlient",textBox2.Tex);
+                MySqlCommand command = new MySqlCommand("UPDATE klient set idKlient=@idKlient,FIO=@FIO,DataYear=@DataYear,Adress ='" + textBox3.Text + "',Telephone ='" + maskedTextBox1.Text + "',Snils ='" + maskedTextBox3.Text + "',INN ='" + maskedTextBox4.Text + "',MedPolis ='" + maskedTextBox5.Text + "',VidDocum ='" + comboBox1.Text + "',Pasport ='" + maskedTextBox7.Text + "',SeriesPas ='" + maskedTextBox8.Text + "' WHERE idKlient='" + textBox2.Text + "'", connection);
+                command.Parameters.AddWithValue("@idKlient",textBox2.Text);
+                command.Parameters.AddWithValue("@FIO", textBox1.Text);
+                command.Parameters.AddWithValue("@DataYear", maskedTextBox2.Text);
                 if (command.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("Данные изменены");

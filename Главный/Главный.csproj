@@ -71,10 +71,10 @@
     <Compile Include="UpKlient.Designer.cs">
       <DependentUpon>UpKlient.cs</DependentUpon>
     </Compile>
-    <Compile Include="Klient.cs">
+    <Compile Include="Clients\Klient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Klient.Designer.cs">
+    <Compile Include="Clients\Klient.Designer.cs">
       <DependentUpon>Klient.cs</DependentUpon>
     </Compile>
     <Compile Include="NewKlient.cs">
@@ -127,10 +127,10 @@
     <Compile Include="UpUslugi.Designer.cs">
       <DependentUpon>UpUslugi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Uslugi.cs">
+    <Compile Include="Services\Uslugi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Uslugi.Designer.cs">
+    <Compile Include="Services\Uslugi.Designer.cs">
       <DependentUpon>Uslugi.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
@@ -139,7 +139,7 @@
     <EmbeddedResource Include="Glav.resx">
       <DependentUpon>Glav.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Klient.resx">
+    <EmbeddedResource Include="Clients\Klient.resx">
       <DependentUpon>Klient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="material.resx">
@@ -182,7 +182,7 @@
     <EmbeddedResource Include="UpUslugi.resx">
       <DependentUpon>UpUslugi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Uslugi.resx">
+    <EmbeddedResource Include="Services\Uslugi.resx">
       <DependentUpon>Uslugi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -204,9 +204,6 @@
   <ItemGroup>
     <None Include="Resources\Илья.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Clients\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
