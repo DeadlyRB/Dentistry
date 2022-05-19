@@ -21,12 +21,10 @@ namespace Главный
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string updateQuery = "UPDATE klient set idKlient ='" + textBox2.Text +"',FIO ='" + textBox1.Text +"',DataYear ='" + maskedTextBox2.Text +"',Adress ='" + textBox3.Text +"',Telephone ='" + maskedTextBox1.Text +"',Snils ='" + maskedTextBox3.Text +"',INN ='"+ maskedTextBox4.Text+ "',MedPolis ='" + maskedTextBox5.Text +"',VidDocum ='" + comboBox1.Text +"',Pasport ='" + maskedTextBox7.Text +"',SeriesPas ='" + maskedTextBox8.Text + "' WHERE idKlient='"+textBox2.Text+"'";
-
             connection.Open();
             try
             {
- MySqlCommand command = new MySqlCommand(updateQuery, connection);
+                MySqlCommand command = new MySqlCommand("UPDATE klient set idKlient ='" + textBox2.Text + "',FIO ='" + textBox1.Text + "',DataYear ='" + maskedTextBox2.Text + "',Adress ='" + textBox3.Text + "',Telephone ='" + maskedTextBox1.Text + "',Snils ='" + maskedTextBox3.Text + "',INN ='" + maskedTextBox4.Text + "',MedPolis ='" + maskedTextBox5.Text + "',VidDocum ='" + comboBox1.Text + "',Pasport ='" + maskedTextBox7.Text + "',SeriesPas ='" + maskedTextBox8.Text + "' WHERE idKlient='" + textBox2.Text + "'", connection);
             if (command.ExecuteNonQuery() == 1) 
             {
                 MessageBox.Show("Данные изменены");
